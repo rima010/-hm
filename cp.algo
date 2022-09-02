@@ -1,0 +1,22 @@
+ALGORITHM checkpoint
+VAR
+    c : CHAR := '';
+    char : INTEGER := 0;
+    word : INTEGER := 0;
+    vow : INTEGER := 0;
+BEGIN
+    WHILE (c <> '.') DO
+        Read(c);
+        char := char +1;
+        IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+            vow := vow +1;
+        END_IF
+
+        IF (c=' ') THEN
+            word := word +1;
+        END_IF
+
+    END_WHILE
+
+    write('number of CHAR:',char,'number of word:',word,'numberof vowels:',vow)
+END
